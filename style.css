@@ -1,0 +1,239 @@
+* {
+  /*   border: solid 2px red; */
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: 微軟正黑體;
+}
+
+.navbar-nav {
+  position: absolute;
+  right: 5%;
+}
+
+.container1 {
+  padding-top: 5%;
+}
+
+.top {
+  padding-top: 10%;
+  position: center;
+}
+
+.photo {
+  background-image: url(https://github.com/Ynaglala/protfolio/blob/gh-pages/YANG/yang.png?raw=true);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 550px;
+}
+
+.row {
+  padding-top: 1%;
+}
+
+/*  */
+
+:root {
+  --background-dark: #2d3548;
+  --text-light: rgba(255, 255, 255, 0.6);
+  --text-lighter: rgba(255, 255, 255, 0.9);
+  --spacing-s: 8px;
+  --spacing-m: 16px;
+  --spacing-l: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 64px;
+  --width-container: 1200px;
+}
+
+.hero-section {
+  align-items: flex-start;
+  display: flex;
+  min-height: 100%;
+  min-width: 100%;
+  justify-content: center;
+  padding: var(--spacing-xxl) var(--spacing-l);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-column-gap: var(--spacing-l);
+  grid-row-gap: var(--spacing-l);
+  max-width: var(--width-container);
+  width: 100%;
+}
+
+@media (min-width: 540px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .card-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.card {
+  list-style: none;
+  position: relative;
+}
+
+.card:before {
+  content: "";
+  display: block;
+  padding-bottom: 150%;
+  width: 100%;
+}
+
+.card__background {
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--spacing-l);
+  bottom: 0;
+  filter: brightness(0.75) saturate(1.2) contrast(0.85);
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform-origin: center;
+  trsnsform: scale(1) translateZ(0);
+  transition: filter 200ms linear, transform 200ms linear;
+}
+
+.card:hover .card__background {
+  transform: scale(1.05) translateZ(0);
+}
+
+.card-grid:hover > .card:not(:hover) .card__background {
+  filter: brightness(0.1) saturate(0) contrast(1.2) blur(20px);
+}
+
+.card__content {
+  left: 0;
+  padding: var(--spacing-l);
+  position: absolute;
+  top: 0;
+}
+
+.card__category {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-bottom: var(--spacing-s);
+  text-transform: uppercase;
+}
+
+.card__heading {
+  color: var(--text-lighter);
+  font-size: 1.9rem;
+  text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+  line-height: 1.4;
+  word-spacing: 100vw;
+  font-family: "Kosugi Maru", sans-serif;
+}
+
+/* 插畫 */
+
+/* 最後 */
+
+.all {
+  position: absolute;
+  justify-content: center;
+}
+
+.box {
+  width: 380px;
+  background-color: white;
+  box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
+}
+.box:hover {
+  box-shadow: 5px 5px 60px rgba(0, 0, 0, 0.4);
+  transform: translate(-5px, -5px);
+}
+.box:hover .top {
+  height: 250px;
+}
+.top {
+  background-image: url(https://ynaglala.github.io/img/me.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 330px;
+  position: relative;
+  transform: 0.5s;
+}
+.top .tag {
+  width: 25px;
+  height: 50px;
+  background-color: yellow;
+  float: right;
+  margin-right: 20px;
+}
+.top .name {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  padding: 5px 15px;
+  letter-spacing: 2px;
+  color: white;
+  font-size: 24px;
+  font-weight: 300;
+  background: linear-gradient(transparent 0%, black 100%);
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 15px;
+}
+.top .name .smalltext {
+  font-size: 14px;
+}
+.cirbotton {
+  width: 50px;
+  height: 50px;
+  background-color: #5fffff;
+  border-radius: 50%;
+  position: absolute;
+  right: 30px;
+  bottom: -20px;
+}
+.bottom {
+  padding: 10px 20px 20px 20px;
+}
+.bottom li {
+  padding: 5px 0px;
+}
+.bottom h3 {
+  display: inline-block;
+}
+.bottom ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.buttons {
+  margin-top: 30px;
+}
+.buttons btn {
+  display: inline-block;
+  padding: 10px 25px;
+  letter-spacing: 2px;
+}
+
+.btnwebsite {
+  background-color: #fcda5d;
+  color: white;
+  transition: 0.5s;
+}
+.btnwebsite:hover {
+  background-color: #fcda5d;
+}
+.btnnews {
+  background-color: #fcda5d;
+  color: white;
+  transition: 0.5s;
+  float: right;
+}
+btnnews:hover {
+  background-color: #fcda5d;
+}
